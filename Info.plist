@@ -44,8 +44,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://dl.dropbox.com/u/1680368/toodlethings/ToodleThingsUpdate.plist</string>
+	<string>https://github.com/josiahwiebe/toodlethings/releases/download/1.0/Toodle.Things.safariextz</string>
 	<key>Website</key>
-	<string>http://www.josiahwiebe.net</string>
+	<string>http://www.jwie.be</string>
 </dict>
 </plist>
