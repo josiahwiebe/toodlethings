@@ -1,0 +1,846 @@
+/* 
+ * Toodlethings 1.0 originally by Nonimage, designed by
+ * Garfield. Feel free to edit this, and if you improve
+ * it, please let me know at garfieldfan2@gmail.com. 
+ * Ported to Safari by Josiah Wiebe (http://josiahwiebe.net).
+ */ 
+
+/* GLOBAL */ 
+body { 
+  font-family: Lucida Grande,Helvetica,sans-serif !important;
+  background: url(http://www.nonimage.com/stylish/toodledo/backgroundpattern.png) top left !important;
+} 
+
+a:link, a:visited { 
+  color: #4f87bc !important;
+  outline-style: none !important;
+} 
+
+a:hover { color: #000 !important; } 
+
+/* LEFT BAR */ 
+#logo { display:none !important; } 
+
+#toc { 
+  position: fixed !important;
+  top: 0 !important;
+  width: 118px !important;
+  padding: 0 20px 0 20px !important;
+  color: #666666 !important;
+  background-color: #d4dde6 !important;
+  border-top: 1px solid #505050 !important;
+  border-right: 1px solid #666666 !important;
+  font-size: 0.85em !important;
+  height: 100%;
+} 
+
+#toc a:link, #toc a:visited { 
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
+#toc a:hover {
+  text-decoration: none !important;
+  color: #939393 !important;
+} 
+
+#sp2, #sp3, #sp4, #sp5, #sp16, #sp6, #sp7, #sp8, #sp12, #sp13 { 
+  margin-bottom: 8px !important;
+  /* width: 123px !important; */
+} 
+
+.tocex { 
+  margin: 0 0 -10px 20px !important;
+  clear: both !important;
+  display: block !important;
+} 
+
+.arrow { 
+  width: 20px !important;
+  height: 20px !important; 
+  background: url(http://www.nonimage.com/stylish/toodledo/backgroundpattern.png) !important;
+  top: 57px;
+  left:142px;
+  position: absolute !important;
+} 
+
+#tocc { 
+  left: 132px !important;
+  top: 118px !important;
+  height: 16px !important;
+  width: 16px !important;
+} 
+
+/* MAIN */
+#main { 
+  display: inline !important;
+  float: left !important;
+  padding: 0 25px 0 13px !important;
+} 
+
+#main select {
+  float: none !important; 
+  margin: 0px;
+  font-size: 0.9em;
+} 
+
+/* 'ADD TASK' BUTTON */ 
+
+#action_addtask {
+  padding: 6px 10px 0 25px !important;
+  width: 76px !important;
+  height: 19px !important; 
+  background: url(http://www.nonimage.com/stylish/toodledo/button2.png)
+  no-repeat left 2px !important;
+  margin: 0 -16px 0 0 !important;
+  text-align: left !important;
+  color: #000 !important;
+  font-size: 0.9em !important;
+} 
+
+#action_addtask img { display: none !important; } 
+
+#action_cancelAdd {
+  margin: 5px 0 0 0 !important;
+  color: #000 !important;
+  font-size: 1.0em !important;
+} 
+
+/* 'ADD TASK' FORM */
+#addtask { background-color: #000 !important;
+  border: 0 !important;
+  padding: 5px 2px 3px 4px !important;
+  -moz-opacity:.70;
+  opacity:.70;
+  color: #fff !important;
+}
+
+#addtask a { 
+  color: #fff !important;
+  text-decoration: none !important;
+} 
+
+#trg, #tlg, #brg, #blg { background-image: none !important; } 
+
+.field { margin-bottom: 10px !important; } 
+
+#addtask select { 
+  float: none !important;
+  margin-top: none !important;
+} 
+
+/* 'VIEW BY' BAR AT THE TOP */ 
+#viewby { 
+  background: #fff url(http://www.nonimage.com/stylish/toodledo/topshadow.gif) top left !important;
+  margin: 0 -25px 10px -8px !important;
+  font-size: 0.85em !important;
+  height: 16px !important;
+  color: #3b648a !important;
+}
+
+#main.iefix #viewby { padding: 6px 10px 5px 12px; }
+
+#main.front #viewby { 
+  margin-left: -42px !important;
+  padding: 5px 10px !important;
+}
+
+#viewby a:link, #viewby a:visited { color: #262626 !important; } 
+
+#viewby a:hover { 
+  color: #6c6b6b !important; 
+  cursor: pointer !important;
+} 
+
+/* TABS */ 
+img.tl { display: none !important; } 
+
+.tabon { 
+  border-bottom: 1px solid #505050 !important;
+  padding: 4px 1px 1px !important;
+  height: 16px !important;
+  margin: 1px 2px 0px 4px !important;
+  color: #ccc !important;
+  background: 0 none !important;
+  font-size: 1.2em !important;
+  /* background: transparent url(http://www.nonimage.com/stylish/toodledo/topshadow.gif) repeat-x scroll left top !important; */
+} 
+
+.tabon a:link, .tabon a:visited { color: #000 !important; } 
+
+.tabon a:hover { text-decoration: none !important; } 
+
+.tab { 
+  background-image: none !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  padding: 3px 7px 5px 9px !important;
+} 
+
+.tab a:link, .tab a:visited { color: #000 !important; } 
+
+.tab a:hover { 
+  text-decoration: none !important;
+  color: #6c6b6b !important;
+} 
+
+#main.front #moretabs { 
+  padding:2px 9px 5px 15px !important;
+  margin: 2px -4px 0 !important; 
+}
+
+#moretabs {
+    background-color:transparent !important;
+    border:0 none !important;
+    color:#000000 !important;
+    font-size:0.85em !important;
+    padding: 13px 9px 5px 19px;
+    margin: 18px -4px 0;
+    float: right !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+#taboverflow { 
+  background-color: #fff !important;
+  border: 1px solid #ccc !important;
+} 
+
+#taboverflow a:link, #taboverflow a:visited { 
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
+
+#taboverflow a:hover { 
+  text-decoration: none !important;
+  color: #ccc !important;
+} 
+
+/* BAR BELOW TABS */ 
+#head {
+  background-color: transparent !important;
+  border: 0 !important;
+  font-size: 0.85em !important;
+  margin: 10px 0 0 0 !important;
+  margin-top: 12px 
+} 
+
+#head a:link, #head a:visited { 
+  color: black !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  margin-top: 1px !important;
+  cursor: pointer;
+} 
+
+#head a:hover { color: #6c6b6b !important; }
+
+#head a:link.ticed {color: #3B648A !important; } 
+
+#action_showdetails, #action_hidedetails, #action_sorttask, #action_filtertask {} 
+
+#action_showdetails, #action_hidedetails, #action_toggleDividers, #action_toggleSubtasks { 
+  font-weight: bold !important;
+  font-size: 0.9em !important; 
+  margin-top: -1px !important;
+  color: #000 !important; 
+} 
+
+#action_hidedetails, #action_toggleDividers 1 {color: #3B648A !important; }
+
+#action_searchtask { margin-right: 0px !important; }
+
+#action_toggle_sidebar { 
+  margin: 0 10px 0 0 !important; 
+  color: #fff !important; 
+  text-decoration: none !important;
+} 
+
+#status { 
+  color: black !important; 
+  margin: 0 0 0 0 !important;
+} 
+
+#tip, #filtertask, #sorttask { background-color: transparent !important; }
+
+#searchtask { 
+  background-color: transparent !important; 
+  border: medium none transparent !important;
+  font-size: 0.85em !important;
+  color: #000 !important;
+} 
+
+#searchtask select {
+  float: none !important;
+  margin-right: 5px !important;
+}
+
+#searchtask a:link, #searchtask a:visited {
+  font-weight: bold !important;
+  color: #000 !important;
+  margin-left: 2px;
+  font-size: 0.95em;
+}
+
+#searchtask .right { font-size: 0.95em !important; }
+
+
+/* COLUMN HEADERS */ 
+#colhead { 
+  background-color: transparent !important;
+  margin: 2px 0 0 0 !important;
+  padding-top: 5px !important;
+  width: 100% !important;
+  font-size: 0.85em !important;
+  border-bottom: 1px solid #505050 !important;
+  border-top: 1px solid #000 !important;
+}
+
+#colhead a:link, #colhead a:visited { 
+  text-decoration: none !important;
+  color: #000 !important;
+} 
+#colhead a:hover { color: #6c6b6b !important; } 
+
+.col0, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col12b, .col13, .col14, .col15, .col16, .col2048, .colc, .col256, .col512, .col1024, .col8192 { border: 0 !important; } 
+
+#tabs {
+  font-size: 0.85em !important;
+  margin-bottom: -8px !important;
+  margin-top: -2px !important;
+  height: 24px !important;
+} 
+
+#tabs .right {
+  float: right !important;
+  overflow: hidden !important;
+  margin-top: 6px !important;
+  font-size: 1.0em !important;
+  text-decoration: none !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  margin-right: 5px; 
+  display: none !important;
+} 
+
+/* SEPERATORS */ 
+.sep {
+  background: transparent url(http://www.nonimage.com/stylish/toodledo/calendar.png)
+  2px 4px no-repeat !important;
+  padding: 5px 0px 12px 2px !important;
+  margin-left: 5px !important;
+  margin-top: 2px !important;
+} 
+
+.sep img { 
+  display: none !important;
+  padding-right: 2px !important;
+} 
+
+.sep a:link, .sep a:visited { 
+  text-decoration: none !important;
+  color: #000 !important;
+  margin-left: 22px !important;
+  margin-top: 10px !important;
+} 
+
+.sep a:hover { color: #6c6b6b !important; } 
+
+/* TASKS */
+#tasks { 
+  font-size: 0.85em !important;
+  color: #3d3d3d !important;
+} 
+
+.row {
+  padding: 4px 0 1px 3px !important;
+  background: transparent url(http://www.nonimage.com/stylish/toodledo/taskbg.png) repeat-x !important;
+  background-position: top right !important;
+  margin: -1px 0px 3px 0 !important;
+  border: 0 !important;
+} 
+
+#tasks .subtasks { 
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+} 
+
+#tasks .subtasks .subm, #tasks .cols row { margin-top: 2px !important; }  
+
+#tasks .subm { margin: 2px 4px 0 0 !important; } 
+
+#tasks .subm img { 
+  height: 14px !important;
+  width: 14px !important;
+} 
+
+#tasks .subtasks .moresubs a {
+  color: #000 !important;
+  font-size: 1.1em !important;
+  margin-left: 5px !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+} 
+
+#tasks .subtasks .moresubs a img { margin: 1px -2px 0 0 !important; }
+
+#tasks .subtasks .col0 { margin-top: 2px !important; } 
+
+.isd { margin-top: 2px !important; } 
+
+.ihd { margin-top: 3px !important; }
+
+#tasks .sub, #tasks .subp { 
+  margin: 3px 7px 0px 0px; 
+  height: 13px !important;
+  width: 13px !important;
+} 
+
+.cols:hover span, .cols:hover .note { background-color: transparent !important;}
+
+/* DATE STYLES */ 
+.date0 { color: #3d3d3d !important; }
+
+.date1 { color: #3d3d3d !important; } 
+
+.date2 { color: #79BB25 !important; } 
+
+.date3 { color: #aa4545 !important; } 
+
+/* PRIORITY STYLES */ 
+
+.pri0 { color: #262626 !important; }
+
+.pri1 { color: #443107 !important; } 
+
+.pri2 { color: #443107 !important; } 
+
+.pri3 { color: #C47B1B !important; } 
+
+
+/* FLUID WIDTHS (EXPERIMENTAL) */ 
+#tasks { width: 100% !important; } 
+
+.ch { 
+  width: 27px !important;
+  height: 28px !important;
+  text-align: center !important;
+  margin: -4px 0 0 -3px !important;
+  background: #fff url(http://www.nonimage.com/stylish/toodledo/ch.png) top left no-repeat !important;
+} 
+
+.chd { 
+  width: 27px !important;
+  height: 28px !important;
+  text-align: center !important;
+  margin: -4px 0 0 -3px !important;
+  background: #fff url(http://www.nonimage.com/stylish/toodledo/chd.png) top left no-repeat !important;
+} 
+
+.st, .std { margin: 3px 0px 0 0 !important; } 
+
+.st img, .std img {
+  width: 13px !important;
+  height: 13px !important; 
+} 
+
+.note { margin: 10px 0 10px 45px !important; } 
+
+.note a { color: #000 !important; } 
+
+.not { 
+  height: 14px !important;
+  width: 14px !important; 
+  margin-top: 3px;
+} 
+
+img.not { margin-right: -3px !important; } 
+
+.ednote { 
+  margin-bottom: 6px !important;
+  background-color: #f5f4e8 !important;
+} 
+
+#colhead div { border: 0 none !important; } 
+
+.dets_bot { 
+  margin: 5px 20px 1px !important;
+  font-size: 0.95em !important;
+  padding: 1px;
+} 
+
+.dets_bot .date2 { color: #27b31a !important; } 
+
+.dets_bot .del { 
+  margin-top: -22px !important;
+  margin-right: -7px !important;
+}
+
+.dets_bot img { 
+  height: 14px !important;
+  width: 14px !important;
+} 
+
+.task { width: 500px !important; }
+
+.dets_top { 
+  margin-top: 1px !important;
+  margin-right: 19px !important;
+} 
+
+.del { 
+  margin-right: 8px !important;
+  margin-top: 3px !important;
+}
+
+#main.front #viewby { 
+  padding: 6px 10px 5px 46px !important; 
+} 
+
+.dets_top .noo { margin-top: 20px !important; } 
+
+
+#main.front h1 { 
+  margin-left: -42px !important;
+  padding: 5px 10px 5px 42px !important;
+}
+
+#main.iefix h1 { 
+  margin-left: -24px;
+  padding: 5px 10px 5px 8px;
+} 
+
+#action_addNote {
+  background:transparent url(http://www.nonimage.com/stylish/toodledo/button2.png) no-repeat scroll left 2px !important;
+  color:#000 !important;
+  font-size:0.9em !important;
+  height:19px !important;
+  margin: 0 0 0 0 !important;
+  padding: 5px 0 0 25px !important;
+  text-align:left !important; 
+  text-decoration: none;
+  float:right !important;
+} 
+
+#main h1 {
+  margin-top:-2px !important;
+  margin-bottom:15px;
+} 
+
+#main h1.forum { 
+  color: #4F87BC !important;
+  font-size: 0.9em !important;
+  padding-top: 6px !important;
+  padding-bottom: 4px !important;
+} 
+
+h1 { 
+  background:#FFF url(http://www.nonimage.com/stylish/toodledo/topshadow.gif) repeat scroll left top !important;
+    height:16px !important;
+    color:#224; 
+    font-size:1.0em !important;
+    font-weight:bold;
+    padding:0px 0px 0px 0px;
+    margin: 0 -25px 10px -8px !important;
+}
+  
+a img { margin: -2px 0; }
+
+#action_addNote img {display: none !important; }
+
+input#addbtn,input#meditbtn{
+  background:transparent none repeat scroll 0 0 !important;
+  border:0 none; 
+  cursor:pointer; 
+  float:right; 
+  margin-right: 0px;
+  margin-top: -2px !important;
+} 
+
+#main .narrow{ 
+  line-height: 1.3em !important;
+  width: 100% !important;
+} 
+
+h1+p { font-size: 0.85em !important; } 
+
+#toolbar {
+  padding: 3px 5px 10px !important;
+  border-bottom: 1px solid #000 !important; 
+  border: none transparent !important;
+  color: #000 !important;
+  background-color: transparent !important;
+}
+
+#toolbar a:link, #toolbar a:visited { 
+  color: black !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  margin-top: 1px !important;
+  cursor: pointer;
+  font-size: 0.9em !important;
+} 
+
+#toolbar a:hover { color: #6c6b6b !important; }
+#toolbar a:link.ticed {color: #3B648A !important; } 
+
+#toolbar a.bold { border-bottom: 1px solid #000 !important; }
+#toolbar .black { font-size: 0.9em !important; }
+
+#toolbar img { display: none; }
+#toolbar .right img { display: inline !important; }
+
+
+
+.right a:link, a:visited { 
+  font-size: 0.9em;
+  text-decoration: none;
+} 
+
+.narrow .right { margin-right: 5px; } 
+
+#sp21 { margin-bottom: 6px !important; }
+
+h3 { font-size: 1.2em !important; } 
+
+.sep a { padding-bottom: 3px !important; } 
+
+#tabs .tab { margin-top: 3px !important; } 
+
+#toolbar .right { 
+  font-size: 0.9em !important;
+  margin-right: 3px !important;
+} 
+
+.right { margin-top: -2px; } 
+
+.right a img { margin-top: 3px !important; } 
+
+#colhead .col0, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col12b, .col13, .col14, .col15, .col16, .col2048, .colc, .col256, .col512, .col1024 { margin-left: 5px !important; } 
+
+.cal_month { 
+  background-color: transparent !important;
+  font-size: 1.1em !important;
+  padding-bottom: 5px !important;
+  padding-top: 5px !important; 
+} 
+
+.calendar .cal_day_name { 
+  background: #fff url(http://www.nonimage.com/stylish/toodledo/topshadow.gif) top left !important;
+  padding: 5px 10px !important;
+  margin: 0 -25px 10px -8px !important;
+  font-size: 0.85em !important;
+  height: 16px !important;
+  color: #3b648a !important;
+} 
+
+.cal_week { 
+  border-top: none !important; 
+  padding: 0 !important;
+} 
+
+.action { 
+  font-size: 1.05em !important;
+  font-weight: bold !important;
+  border-bottom: 1px solid black !important;
+  padding-bottom: 5px !important;
+} 
+
+.cal_weekend, .cal_weekend2 { background-color: transparent !important; } 
+
+.cal_anyday, .cal_today { padding: 3px 7px 3px 4px; } 
+
+.cal_today { background-color: #79BB25 !important; } 
+
+/* Goals */ 
+select { 
+  float: right;
+  margin-right: 115px;
+  margin-top: -36px;
+} 
+
+.short input, .short select { margin: 0 !important; } 
+
+h3 a img { margin: 0 !important; } 
+
+#filtertask a:link, #filtertask a:visited { 
+  text-decoration: none !important;
+  font-size: 0.9em;
+  font-weight: bold !important;
+  color: #000 !important;
+  margin-right: 5px !important;
+  margin-top: 3px !important;
+}
+#filtertask a:hover { color: #6c6b6b !important; } 
+
+#filtertask #forgetsearch { text-decoration: none !important; } 
+
+#filtertask .right { font-size: 0.9em !important; } 
+
+#filtertask {
+  border: medium none transparent !important;
+  padding: 8px 0px 8px 5px !important;
+} 
+
+#head #action_edittasks, #head #action_sorttask { padding-top: -2px !important; }
+
+#searchtask .right { margin-top: 0 !important; }
+
+action./notebook.php { margin-left: 20px !important; } 
+
+#edit_note select { 
+  margin-left: 320px !important;
+  float: none !important;
+  margin-top: -20px !important;
+} 
+
+/* Forums */ 
+.forumbtn { width: 110px; } 
+
+#profilelnk { 
+  font-size: 0.9em !important;
+  margin-top: 5px !important;
+} 
+
+#forumwrap { max-width: none !important; } 
+
+#forumwrap h1 + p { 
+  font-size: 1.15em !important;
+  margin-top: 15px !important;
+} 
+
+#forum h1.forum a:link, a:visited { font-size: 1.0em; } 
+
+#ruleslnk { margin: 6px 5px 0 0; } 
+
+#head h3 { margin-top: 3px; }
+
+/* Goals */ 
+#goalform .sep { 
+  font-size: 0.9em !important;
+  padding: 4px 0px 20px 25px !important;
+} 
+
+#goalform input, textarea { 
+  margin-left: 5px !important;
+  width: none !important;
+} 
+
+#filtertask select {
+  float: none !important;
+  margin-left: 5px !important;
+  font-size: 0.9em !important;
+}
+
+#filtertask {
+  font-size: 0.9em !important;
+  font-weight: bold !important; 
+}
+
+#filtertask .btn { 
+  background: transparent url(http://www.nonimage.com/stylish/toodledo/topshadow.gif) repeat-x scroll left top !important;
+  border-top: medium none transparent !important;
+  padding: 1px !important;
+  margin-top: -1px !important; 
+} 
+
+#filtertask .btn:hover {
+  border: 1px solid #666666 !important;
+  padding: 1px !important;
+  border-top: medium none transparent !important;
+} 
+
+.field { margin-left: 5px !important; } 
+
+#action_doSort select { 
+  float: none !important;
+  margin: 0 !important;
+} 
+
+#sorttask .btn { 
+  background: transparent url(http://www.nonimage.com/stylish/toodledo/topshadow.gif) repeat-x scroll 0 0 !important;
+  padding: 2px 2px 1px !important;
+  float: none !important;
+  margin: 2px !important;
+  font-size: 0.85em !important;
+  border-top: 0px none !important; 
+}
+#sorttask .btn:hover { 
+  border-top: 0px none !important; 
+  border-left: 1px solid #666666 !important;
+  border-right: 1px solid #666666 !important;
+  border-bottom: 1px solid #666666 !important;
+}
+
+#sorttask input, textarea { width: none !important; }
+
+#sorttask {
+  font-size: 0.9em !important;
+  border: medium none transparent !important;
+} 
+
+#sorttask a:link, #sorttask a:visited { 
+  font-size: 0.9em !important;
+  font-weight: bold !important;
+  color: #000 !important;
+  margin-top: 4px !important;
+} 
+
+.rule { background-color: #E4E4E4 !important; }
+
+#searchform #searchtask {
+  background-color: none !important;
+  color: none !important; 
+  opacity: 0.75 !important;
+} 
+
+/* Collaborators */ 
+#sharetask { 
+  background-color: transparent !important; 
+  border: medium none transparent !important;
+  font-size: 0.85em !important;
+} 
+
+#sharetask a:link, #sharetask a:visited {
+  font-weight: bold !important;
+  font-size: 0.95em !important;
+  color: #000 !important;
+  margin-top: 4px !important;
+} 
+
+.dets span, .dets_top span { margin-right: 35px !important; } 
+
+#noteshield { opacity: 0.4 !important; } 
+
+/* Multi-Edit */ 
+#multiedit input, #multiedit select { margin: 2px !important; } 
+
+#multiedit {
+  background: transparent !important;
+  border: medium none transparent !important; 
+  font-size: 0.9em !important;
+  margin-top: 3px !important;
+}
+
+#multiedit span { font-size: 1.0em !important; }
+
+#multiedit a:link, #multiedit a:visited {
+  color: #000 !important;
+  font-weight: bold !important;
+  font-size: 0.9em !important;
+  margin-right: 5px !important;
+  text-decoration: none !important;
+} 
+
+.rulegroup { background-color: transparent !important; } 
+
+.dett { margin-top: 3px !important; }
+
+/* Arrows */ 
+#toco { 
+  left: 15px !important;
+  top: 119px !important; 
+  height: 16px !important;
+  width: 16px !important;
+}
